@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.75rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    
+    /* Custom soothing colors */
+    --lavender-50: 270 50% 98%;
+    --lavender-100: 270 47% 95%;
+    --lavender-200: 270 45% 88%;
+    --lavender-300: 270 42% 78%;
+    --lavender-400: 270 40% 65%;
+    --lavender-500: 270 38% 55%;
+    --lavender-600: 270 36% 45%;
+    --lavender-700: 270 34% 35%;
+    
+    --sage-50: 150 25% 97%;
+    --sage-100: 150 23% 92%;
+    --sage-200: 150 22% 83%;
+    --sage-300: 150 20% 70%;
+    --sage-400: 150 18% 55%;
+    --sage-500: 150 20% 45%;
+    --sage-600: 150 22% 35%;
+    --sage-700: 150 24% 25%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  /* Soothing lavender palette */
+  .bg-lavender-50 { background-color: hsl(270, 50%, 98%); }
+  .bg-lavender-100 { background-color: hsl(270, 47%, 95%); }
+  .bg-lavender-200 { background-color: hsl(270, 45%, 88%); }
+  .bg-lavender-300 { background-color: hsl(270, 42%, 78%); }
+  .bg-lavender-400 { background-color: hsl(270, 40%, 65%); }
+  .bg-lavender-500 { background-color: hsl(270, 38%, 55%); }
+  .bg-lavender-600 { background-color: hsl(270, 36%, 45%); }
+  .bg-lavender-700 { background-color: hsl(270, 34%, 35%); }
+  
+  .text-lavender-50 { color: hsl(270, 50%, 98%); }
+  .text-lavender-100 { color: hsl(270, 47%, 95%); }
+  .text-lavender-200 { color: hsl(270, 45%, 88%); }
+  .text-lavender-300 { color: hsl(270, 42%, 78%); }
+  .text-lavender-400 { color: hsl(270, 40%, 65%); }
+  .text-lavender-500 { color: hsl(270, 38%, 55%); }
+  .text-lavender-600 { color: hsl(270, 36%, 45%); }
+  .text-lavender-700 { color: hsl(270, 34%, 35%); }
+  
+  .border-lavender-100 { border-color: hsl(270, 47%, 95%); }
+  .border-lavender-200 { border-color: hsl(270, 45%, 88%); }
+  .border-lavender-300 { border-color: hsl(270, 42%, 78%); }
+  
+  .ring-lavender-100 { --tw-ring-color: hsl(270, 47%, 95%); }
+  .ring-lavender-200 { --tw-ring-color: hsl(270, 45%, 88%); }
+  
+  .from-lavender-100 { --tw-gradient-from: hsl(270, 47%, 95%) var(--tw-gradient-from-position); }
+  .from-lavender-200 { --tw-gradient-from: hsl(270, 45%, 88%) var(--tw-gradient-from-position); }
+  .from-lavender-400 { --tw-gradient-from: hsl(270, 40%, 65%) var(--tw-gradient-from-position); }
+  .from-lavender-500 { --tw-gradient-from: hsl(270, 38%, 55%) var(--tw-gradient-from-position); }
+  .from-lavender-600 { --tw-gradient-from: hsl(270, 36%, 45%) var(--tw-gradient-from-position); }
+  
+  .to-lavender-100 { --tw-gradient-to: hsl(270, 47%, 95%) var(--tw-gradient-to-position); }
+  .to-lavender-200 { --tw-gradient-to: hsl(270, 45%, 88%) var(--tw-gradient-to-position); }
+  .to-lavender-500 { --tw-gradient-to: hsl(270, 38%, 55%) var(--tw-gradient-to-position); }
+  .to-lavender-600 { --tw-gradient-to: hsl(270, 36%, 45%) var(--tw-gradient-to-position); }
+  .to-lavender-700 { --tw-gradient-to: hsl(270, 34%, 35%) var(--tw-gradient-to-position); }
+  
+  .via-lavender-50\/30 { --tw-gradient-via: hsl(270, 50%, 98%, 0.3) var(--tw-gradient-via-position); }
+  
+  .shadow-lavender-200\/50 { --tw-shadow-color: hsl(270, 45%, 88%, 0.5); }
+  
+  .hover\:from-lavender-500:hover { --tw-gradient-from: hsl(270, 38%, 55%) var(--tw-gradient-from-position); }
+  .hover\:from-lavender-600:hover { --tw-gradient-from: hsl(270, 36%, 45%) var(--tw-gradient-from-position); }
+  .hover\:to-lavender-600:hover { --tw-gradient-to: hsl(270, 36%, 45%) var(--tw-gradient-to-position); }
+  .hover\:to-lavender-700:hover { --tw-gradient-to: hsl(270, 34%, 35%) var(--tw-gradient-to-position); }
+  .hover\:border-lavender-300:hover { border-color: hsl(270, 42%, 78%); }
+  .hover\:bg-lavender-50:hover { background-color: hsl(270, 50%, 98%); }
+  .hover\:text-lavender-700:hover { color: hsl(270, 34%, 35%); }
+  
+  /* Soothing sage palette */
+  .bg-sage-50 { background-color: hsl(150, 25%, 97%); }
+  .bg-sage-100 { background-color: hsl(150, 23%, 92%); }
+  .bg-sage-200 { background-color: hsl(150, 22%, 83%); }
+  .bg-sage-300 { background-color: hsl(150, 20%, 70%); }
+  .bg-sage-400 { background-color: hsl(150, 18%, 55%); }
+  .bg-sage-500 { background-color: hsl(150, 20%, 45%); }
+  .bg-sage-600 { background-color: hsl(150, 22%, 35%); }
+  .bg-sage-700 { background-color: hsl(150, 24%, 25%); }
+  
+  .text-sage-50 { color: hsl(150, 25%, 97%); }
+  .text-sage-100 { color: hsl(150, 23%, 92%); }
+  .text-sage-200 { color: hsl(150, 22%, 83%); }
+  .text-sage-300 { color: hsl(150, 20%, 70%); }
+  .text-sage-400 { color: hsl(150, 18%, 55%); }
+  .text-sage-500 { color: hsl(150, 20%, 45%); }
+  .text-sage-600 { color: hsl(150, 22%, 35%); }
+  .text-sage-700 { color: hsl(150, 24%, 25%); }
+  
+  .border-sage-100 { border-color: hsl(150, 23%, 92%); }
+  .border-sage-200 { border-color: hsl(150, 22%, 83%); }
+  .border-sage-300 { border-color: hsl(150, 20%, 70%); }
+  
+  .from-sage-100 { --tw-gradient-from: hsl(150, 23%, 92%) var(--tw-gradient-from-position); }
+  .from-sage-200 { --tw-gradient-from: hsl(150, 22%, 83%) var(--tw-gradient-from-position); }
+  .from-sage-300 { --tw-gradient-from: hsl(150, 20%, 70%) var(--tw-gradient-from-position); }
+  .from-sage-50 { --tw-gradient-from: hsl(150, 25%, 97%) var(--tw-gradient-from-position); }
+  
+  .to-sage-100 { --tw-gradient-to: hsl(150, 23%, 92%) var(--tw-gradient-to-position); }
+  .to-sage-200 { --tw-gradient-to: hsl(150, 22%, 83%) var(--tw-gradient-to-position); }
+  .to-sage-300 { --tw-gradient-to: hsl(150, 20%, 70%) var(--tw-gradient-to-position); }
+  .to-sage-50\/30 { --tw-gradient-to: hsl(150, 25%, 97%, 0.3) var(--tw-gradient-to-position); }
+  
+  .via-sage-300 { --tw-gradient-via: hsl(150, 20%, 70%) var(--tw-gradient-via-position); }
+}
