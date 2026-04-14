@@ -1,4 +1,4 @@
-# project-sirra
+# Project-sirra
 group therapy organiser SaaS 
 disclaimer: as the application was made on a external platform [Base44], the contents of the project includes just frontend code and backend skeletal code. The inner logic for connection 
 is yet to be built out thoroughly
